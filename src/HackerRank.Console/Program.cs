@@ -11,6 +11,9 @@ Console.WriteLine("6. Flipping Bits");
 
 int choice = Convert.ToInt32(Console.ReadLine().Trim());
 switch(choice){
+    case 1:
+        PlusMinusSetup.Setup(choice);
+        break;
     case 6:
         FlippingBitsSetup.Setup(choice);
         break;

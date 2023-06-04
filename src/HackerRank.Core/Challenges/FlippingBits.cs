@@ -1,8 +1,9 @@
 namespace HackerRank.Core.Challenges;
 
-public class FlippingBits
+public static class FlippingBits
 {
-    public static long Execute(long n){
+    public static long Execute(long n)
+    {
         Console.WriteLine($" Running execution for {n}...");
         var sourceBin = Convert.ToString(n, 2).PadLeft(32, '0');
         Console.Write($"Source: {sourceBin}");
