@@ -4,7 +4,7 @@ public class PlusMinus
 {
     public static void Execute(List<int> arr)
     {
-        Console.WriteLine($" Running execution for {arr.Count} items...");
+        Console.WriteLine($" Running execution for {arr.Count} items at {DateTime.Now.ToLongTimeString()}...");
         var total = arr.Count;
         var results = new Dictionary<string, int>{
             { "p", 0 },
@@ -21,9 +21,9 @@ public class PlusMinus
                 results["z"]++;
         }
         
-        Console.WriteLine(" " + CalculateRatio(results["p"], total));
-        Console.WriteLine(" " + CalculateRatio(results["n"], total));
-        Console.WriteLine(" " + CalculateRatio(results["z"], total));
+        Console.WriteLine($" + ({results["p"]}): {CalculateRatio(results["p"], total)}");
+        Console.WriteLine($" - ({results["n"]}): {CalculateRatio(results["n"], total)}");
+        Console.WriteLine($" 0 ({results["z"]}): {CalculateRatio(results["z"], total)}");
     }
     
     private static string CalculateRatio(int count, int total)
@@ -32,5 +32,4 @@ public class PlusMinus
         var totalDecimal = Convert.ToDecimal(total);
         return (countDecimal / totalDecimal).ToString("N6");
     }
-
 }
