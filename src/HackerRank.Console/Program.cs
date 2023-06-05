@@ -5,7 +5,7 @@ Console.WriteLine("Choose from the following challenges:");
 Console.WriteLine("1. Plus Minus");
 Console.WriteLine("2. Mini-Maxi Sum");
 Console.WriteLine("3. Time Conversion");
-Console.WriteLine("4. Sparse Arrays");
+Console.WriteLine("4. Matching Strings (Sparse Arrays)");
 Console.WriteLine("5. Lonely Integer");
 Console.WriteLine("6. Flipping Bits");
 
@@ -19,6 +19,9 @@ switch(choice){
         break;
     case 3:
         TimeConversionSetup.Setup(choice);
+        break;
+    case 4:
+        MatchingStringsSetup.Setup(choice);
         break;
     case 6:
         FlippingBitsSetup.Setup(choice);
