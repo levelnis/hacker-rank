@@ -14,6 +14,9 @@ switch(choice){
     case 1:
         PlusMinusSetup.Setup(choice);
         break;
+    case 2:
+        MiniMaxiSumSetup.Setup(choice);
+        break;
     case 6:
         FlippingBitsSetup.Setup(choice);
         break;
