@@ -9,13 +9,16 @@ Console.WriteLine("4. Sparse Arrays");
 Console.WriteLine("5. Lonely Integer");
 Console.WriteLine("6. Flipping Bits");
 
-int choice = Convert.ToInt32(Console.ReadLine().Trim());
+int choice = Convert.ToInt32(Console.ReadLine()!.Trim());
 switch(choice){
     case 1:
         PlusMinusSetup.Setup(choice);
         break;
     case 2:
         MiniMaxiSumSetup.Setup(choice);
+        break;
+    case 3:
+        TimeConversionSetup.Setup(choice);
         break;
     case 6:
         FlippingBitsSetup.Setup(choice);
