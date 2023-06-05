@@ -8,6 +8,7 @@ public static class PlusMinusSetup
     public static void Setup(int choice)
     {
         System.Console.WriteLine($"{choice}. Plus Minus");
+        System.Console.WriteLine("  ==  Problem: Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. Print the decimal value of each fraction on a new line with  places after the decimal.");
         System.Console.WriteLine("Enter a mixture of positive, negative and zero ints, separated by a space");
         List<int> arr = System.Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
 
