@@ -23,6 +23,9 @@ switch(choice){
     case 4:
         MatchingStringsSetup.Setup(choice);
         break;
+    case 5:
+        LonelyIntegerSetup.Setup(choice);
+        break;
     case 6:
         FlippingBitsSetup.Setup(choice);
         break;

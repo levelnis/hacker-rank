@@ -1,6 +1,6 @@
 namespace HackerRank.Core.Challenges;
 
-public class MatchingStrings
+public static class MatchingStrings
 {
     public static List<int> Execute(List<string> strings, List<string> queries)
     {

@@ -1,6 +1,6 @@
 namespace HackerRank.Core.Challenges;
 
-public class PlusMinus
+public static class PlusMinus
 {
     public static void Execute(List<int> arr)
     {

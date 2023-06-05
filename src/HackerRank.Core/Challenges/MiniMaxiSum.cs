@@ -1,6 +1,6 @@
 namespace HackerRank.Core.Challenges;
 
-public class MiniMaxiSum
+public static class MiniMaxiSum
 {
     public static void Execute(List<int> arr)
     {
