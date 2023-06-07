@@ -8,6 +8,7 @@ Console.WriteLine("3. Time Conversion");
 Console.WriteLine("4. Matching Strings (Sparse Arrays)");
 Console.WriteLine("5. Lonely Integer");
 Console.WriteLine("6. Flipping Bits");
+Console.WriteLine("7. Diagonal Difference");
 
 int choice = Convert.ToInt32(Console.ReadLine()!.Trim());
 switch(choice){
@@ -28,6 +29,9 @@ switch(choice){
         break;
     case 6:
         FlippingBitsSetup.Setup(choice);
+        break;
+    case 7:
+        DiagonalDifferenceSetup.Setup(choice);
         break;
     default:
         throw new InvalidOperationException("Invalid option.");
