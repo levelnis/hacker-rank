@@ -1,10 +1,10 @@
 namespace HackerRank.Console.ChallengeSetups;
 
-public class MatchingStringsSetup
+public class MatchingStringsSetup : IChallengeSetup
 {
-    public static void Setup(int choice)
+    public void Run()
     {
-        System.Console.WriteLine($"{choice}. Matching Strings");
+        System.Console.WriteLine("Matching Strings");
         System.Console.WriteLine("  ==  Problem: There is a collection of input strings and a collection of query strings. For each query string, determine how many times it occurs in the list of input strings. Return an array of the results.");
 
         System.Console.WriteLine("How many input strings?");

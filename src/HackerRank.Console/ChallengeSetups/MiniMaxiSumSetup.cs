@@ -1,10 +1,10 @@
 namespace HackerRank.Console.ChallengeSetups;
 
-public static class MiniMaxiSumSetup
+public class MiniMaxiSumSetup : IChallengeSetup
 {
-    public static void Setup(int choice)
+    public void Run()
     {
-        System.Console.WriteLine($"{choice}. Plus Minus");
+        System.Console.WriteLine("Plus Minus");
         System.Console.WriteLine("  ==  Problem: Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated long integers.");
         System.Console.WriteLine("Enter 5 positive ints, separated by a space");
         List<int> arr = System.Console.ReadLine()!.TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();

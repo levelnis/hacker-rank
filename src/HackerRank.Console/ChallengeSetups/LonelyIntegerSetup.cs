@@ -1,10 +1,10 @@
 namespace HackerRank.Console.ChallengeSetups;
 
-public static class LonelyIntegerSetup
+public class LonelyIntegerSetup : IChallengeSetup
 {
-    public static void Setup(int choice)
+    public void Run()
     {
-        System.Console.WriteLine($"{choice}. Lonely Integer");
+        System.Console.WriteLine("Lonely Integer");
         System.Console.WriteLine("  ==  Problem: Given an array of integers, where all elements but one occur twice, find the unique element.");
         System.Console.WriteLine("Enter a bunch of int pairs, include 1 unique int, separated by a space");
         List<int> arr = System.Console.ReadLine()!.TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();

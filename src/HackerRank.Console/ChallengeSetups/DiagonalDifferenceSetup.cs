@@ -1,10 +1,10 @@
 namespace HackerRank.Console.ChallengeSetups;
 
-public static class DiagonalDifferenceSetup
+public class DiagonalDifferenceSetup : IChallengeSetup
 {
-    public static void Setup(int choice)
+    public void Run()
     {
-        System.Console.WriteLine($"{choice}. Diagonal Difference");
+        System.Console.WriteLine("Diagonal Difference");
         System.Console.WriteLine("  ==  Problem: Given a square matrix, calculate the absolute difference between the sums of its diagonals.");
         System.Console.WriteLine("How big is the matrix?");
         int n = Convert.ToInt32(System.Console.ReadLine()!.Trim());

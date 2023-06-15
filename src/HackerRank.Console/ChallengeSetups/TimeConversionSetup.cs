@@ -1,10 +1,10 @@
 namespace HackerRank.Console.ChallengeSetups;
 
-public class TimeConversionSetup
+public class TimeConversionSetup : IChallengeSetup
 {
-    public static void Setup(int choice)
+    public void Run()
     {
-        System.Console.WriteLine($"{choice}. Time Conversion");
+        System.Console.WriteLine("Time Conversion");
         System.Console.WriteLine("  ==  Problem: Given a time in -hour AM/PM format, convert it to military (24-hour) time.");
         System.Console.WriteLine("Enter a 12 hour time string including the AM/PM, e.g. 06:30:25AM");
 
