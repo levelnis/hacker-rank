@@ -1,6 +1,3 @@
-using System.Diagnostics;
-using HackerRank.Core.Challenges;
-
 namespace HackerRank.Console.ChallengeSetups;
 
 public static class DiagonalDifferenceSetup
