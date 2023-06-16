@@ -8,6 +8,7 @@ Console.WriteLine("5. Lonely Integer");
 Console.WriteLine("6. Flipping Bits");
 Console.WriteLine("7. Diagonal Difference");
 Console.WriteLine("8. Counting Sort 1");
+Console.WriteLine("9. Pangrams");
 
 int choice = Convert.ToInt32(Console.ReadLine()!.Trim());
 var runner = Selector.Create(choice);

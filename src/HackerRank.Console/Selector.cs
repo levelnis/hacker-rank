@@ -23,6 +23,8 @@ public static class Selector
                 return new DiagonalDifferenceSetup(timer);
             case 8:
                 return new CountingSortOneSetup(timer);
+            case 9:
+                return new PangramsSetup(timer);
             default:
                 throw new InvalidOperationException("Invalid option.");
         }
