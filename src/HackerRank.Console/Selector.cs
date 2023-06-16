@@ -1,9 +1,10 @@
-using HackerRank.Console.ChallengeSetups;
+namespace HackerRank.Console;
 
 public static class Selector
 {
     public static IChallengeSetup Create(int choice)
     {
+        var timer = new ConsoleTimer();
         switch(choice)
         {
             case 1:
@@ -21,7 +22,7 @@ public static class Selector
             case 7:
                 return new DiagonalDifferenceSetup();
             case 8:
-                return new CountingSortOneSetup();
+                return new CountingSortOneSetup(timer);
             default:
                 throw new InvalidOperationException("Invalid option.");
         }
