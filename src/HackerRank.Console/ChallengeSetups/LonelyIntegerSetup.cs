@@ -2,6 +2,13 @@ namespace HackerRank.Console.ChallengeSetups;
 
 public class LonelyIntegerSetup : IChallengeSetup
 {
+    private readonly ITimer _timer;
+
+    public LonelyIntegerSetup(ITimer timer)
+    {
+        _timer = timer;
+    }
+
     public void Run()
     {
         System.Console.WriteLine("Lonely Integer");
@@ -11,14 +18,12 @@ public class LonelyIntegerSetup : IChallengeSetup
 
         Execute(arr);
 
-        static void Execute(List<int> arr)
+        void Execute(List<int> arr)
         {
-            var sw = new Stopwatch();
-            sw.Start();
+            _timer.Start();
             var result = LonelyInteger.Execute(arr);
-            sw.Stop();
-            var elapsed = sw.Elapsed.ToString(@"m\:ss\.fff");
-            System.Console.WriteLine($"Result: {result}, time: {elapsed}");
+            _timer.StopAndLog();
+            System.Console.WriteLine($"Results: {result}");
         }
     }
 }

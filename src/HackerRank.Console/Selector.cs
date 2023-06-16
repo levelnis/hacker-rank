@@ -8,19 +8,19 @@ public static class Selector
         switch(choice)
         {
             case 1:
-                return new PlusMinusSetup();
+                return new PlusMinusSetup(timer);
             case 2:
-                return new MiniMaxiSumSetup();
+                return new MiniMaxiSumSetup(timer);
             case 3:
-                return new TimeConversionSetup();
+                return new TimeConversionSetup(timer);
             case 4:
-                return new MatchingStringsSetup();
+                return new MatchingStringsSetup(timer);
             case 5:
-                return new LonelyIntegerSetup();
+                return new LonelyIntegerSetup(timer);
             case 6:
-                return new FlippingBitsSetup();
+                return new FlippingBitsSetup(timer);
             case 7:
-                return new DiagonalDifferenceSetup();
+                return new DiagonalDifferenceSetup(timer);
             case 8:
                 return new CountingSortOneSetup(timer);
             default:

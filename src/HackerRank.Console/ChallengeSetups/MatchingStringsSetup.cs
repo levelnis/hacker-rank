@@ -2,6 +2,13 @@ namespace HackerRank.Console.ChallengeSetups;
 
 public class MatchingStringsSetup : IChallengeSetup
 {
+    private readonly ITimer _timer;
+
+    public MatchingStringsSetup(ITimer timer)
+    {
+        _timer = timer;
+    }
+
     public void Run()
     {
         System.Console.WriteLine("Matching Strings");
@@ -33,17 +40,14 @@ public class MatchingStringsSetup : IChallengeSetup
 
         Execute(strings, queries);
 
-        static void Execute(List<string> strings, List<string> queries)
+        void Execute(List<string> strings, List<string> queries)
         {
-            var sw = new Stopwatch();
-            sw.Start();
+            _timer.Start();
             List<int> result = MatchingStrings.Execute(strings, queries);
-            sw.Stop();
-            var elapsed = sw.Elapsed.ToString(@"m\:ss\.fff");
+            _timer.StopAndLog();
             System.Console.WriteLine("Result:");
             for(var i = 0; i < result.Count; i++)
                 System.Console.WriteLine(result[i]);
-            System.Console.WriteLine($"Time: {elapsed}");
         }
     }
 }

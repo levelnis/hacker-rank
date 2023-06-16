@@ -2,6 +2,13 @@ namespace HackerRank.Console.ChallengeSetups;
 
 public class DiagonalDifferenceSetup : IChallengeSetup
 {
+    private readonly ITimer _timer;
+
+    public DiagonalDifferenceSetup(ITimer timer)
+    {
+        _timer = timer;
+    }
+
     public void Run()
     {
         System.Console.WriteLine("Diagonal Difference");
@@ -19,14 +26,12 @@ public class DiagonalDifferenceSetup : IChallengeSetup
 
         Execute(arr);
 
-        static void Execute(List<List<int>> arr)
+        void Execute(List<List<int>> arr)
         {
-            var sw = new Stopwatch();
-            sw.Start();
-            int result = DiagonalDifference.Execute(arr);
-            sw.Stop();
-            var elapsed = sw.Elapsed.ToString(@"m\:ss\.fff");
-            System.Console.WriteLine($"Result: {result}, time: {elapsed}");
+            _timer.Start();
+            var result = DiagonalDifference.Execute(arr);
+            _timer.StopAndLog();
+            System.Console.WriteLine($"Results: {result}");
         }
     }
 }

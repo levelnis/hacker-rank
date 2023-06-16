@@ -2,6 +2,13 @@ namespace HackerRank.Console.ChallengeSetups;
 
 public class PlusMinusSetup : IChallengeSetup
 {
+    private readonly ITimer _timer;
+
+    public PlusMinusSetup(ITimer timer)
+    {
+        _timer = timer;
+    }
+
     public void Run()
     {
         System.Console.WriteLine("Plus Minus");
@@ -11,14 +18,11 @@ public class PlusMinusSetup : IChallengeSetup
 
         Execute(arr);
 
-        static void Execute(List<int> arr)
+        void Execute(List<int> arr)
         {
-            var sw = new Stopwatch();
-            sw.Start();
+            _timer.Start();
             PlusMinus.Execute(arr);
-            sw.Stop();
-            var elapsed = sw.Elapsed.ToString(@"m\:ss\.fff");
-            System.Console.WriteLine($"Time: {elapsed}");
+            _timer.StopAndLog();
         }
     }
 }

@@ -2,6 +2,13 @@ namespace HackerRank.Console.ChallengeSetups;
 
 public class FlippingBitsSetup : IChallengeSetup
 {
+    private readonly ITimer _timer;
+
+    public FlippingBitsSetup(ITimer timer)
+    {
+        _timer = timer;
+    }
+
     public void Run()
     {
         System.Console.WriteLine("Flipping Bits");
@@ -17,14 +24,12 @@ public class FlippingBitsSetup : IChallengeSetup
             Execute(qItr, n);
         }
 
-        static void Execute(int i, long n)
+        void Execute(int i, long n)
         {
-            var sw = new Stopwatch();
-            sw.Start();
+            _timer.Start();
             long result = FlippingBits.Execute(n);
-            sw.Stop();
-            var elapsed = sw.Elapsed.ToString(@"m\:ss\.fff");
-            System.Console.WriteLine($"Result {i}: {result}, time: {elapsed}");
+            _timer.StopAndLog();
+            System.Console.WriteLine($"Result {i}: {result}");
         }
     }
 }

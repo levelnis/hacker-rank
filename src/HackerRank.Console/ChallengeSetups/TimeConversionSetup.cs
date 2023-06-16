@@ -2,6 +2,13 @@ namespace HackerRank.Console.ChallengeSetups;
 
 public class TimeConversionSetup : IChallengeSetup
 {
+    private readonly ITimer _timer;
+
+    public TimeConversionSetup(ITimer timer)
+    {
+        _timer = timer;
+    }
+
     public void Run()
     {
         System.Console.WriteLine("Time Conversion");
@@ -12,14 +19,12 @@ public class TimeConversionSetup : IChallengeSetup
 
         Execute(s);
 
-        static void Execute(string s)
+        void Execute(string s)
         {
-            var sw = new Stopwatch();
-            sw.Start();
-            string result = TimeConversion.Execute(s);
-            sw.Stop();
-            var elapsed = sw.Elapsed.ToString(@"m\:ss\.fff");
-            System.Console.WriteLine($"Result: {result}, time: {elapsed}");
+            _timer.Start();
+            var result = TimeConversion.Execute(s);
+            _timer.StopAndLog();
+            System.Console.WriteLine($"Results: {result}");
         }
     }
 }
