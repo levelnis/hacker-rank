@@ -25,6 +25,8 @@ public static class Selector
                 return new CountingSortOneSetup(timer);
             case 9:
                 return new PangramsSetup(timer);
+            case 10:
+                return new TwoArraysSetup(timer);
             default:
                 throw new InvalidOperationException("Invalid option.");
         }

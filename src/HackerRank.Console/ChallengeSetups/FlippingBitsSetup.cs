@@ -27,7 +27,7 @@ public class FlippingBitsSetup : IChallengeSetup
         void Execute(int i, long n)
         {
             _timer.Start();
-            long result = FlippingBits.Execute(n);
+            var result = FlippingBits.Execute(n);
             _timer.StopAndLog();
             System.Console.WriteLine($"Result {i}: {result}");
         }
