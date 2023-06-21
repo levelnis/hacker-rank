@@ -27,6 +27,8 @@ public static class Selector
                 return new PangramsSetup(timer);
             case 10:
                 return new TwoArraysSetup(timer);
+            case 11:
+                return new BirthdaySetup(timer);
             default:
                 throw new InvalidOperationException("Invalid option.");
         }
