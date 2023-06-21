@@ -29,6 +29,8 @@ public static class Selector
                 return new TwoArraysSetup(timer);
             case 11:
                 return new BirthdaySetup(timer);
+            case 12:
+                return new MockTest1Setup(timer);
             default:
                 throw new InvalidOperationException("Invalid option.");
         }

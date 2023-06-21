@@ -11,6 +11,7 @@ Console.WriteLine("8. Counting Sort 1");
 Console.WriteLine("9. Pangrams");
 Console.WriteLine("10. Two Arrays");
 Console.WriteLine("11. Birthday");
+Console.WriteLine("12. Mock Test 1");
 
 int choice = Convert.ToInt32(Console.ReadLine()!.Trim());
 var runner = Selector.Create(choice);
