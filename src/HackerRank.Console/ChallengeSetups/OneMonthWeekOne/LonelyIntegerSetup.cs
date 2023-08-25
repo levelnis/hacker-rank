@@ -1,4 +1,4 @@
-namespace HackerRank.Console.ChallengeSetups;
+namespace HackerRank.Console.ChallengeSetups.OneMonthWeekOne;
 
 public class LonelyIntegerSetup : IChallengeSetup
 {

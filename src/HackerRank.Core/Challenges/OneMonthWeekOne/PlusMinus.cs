@@ -1,4 +1,4 @@
-namespace HackerRank.Core.Challenges;
+namespace HackerRank.Core.Challenges.OneMonthWeekOne;
 
 public static class PlusMinus
 {

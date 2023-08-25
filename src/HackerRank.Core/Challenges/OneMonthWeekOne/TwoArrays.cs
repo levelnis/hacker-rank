@@ -1,3 +1,5 @@
+namespace HackerRank.Core.Challenges.OneMonthWeekOne;
+
 public static class TwoArrays
 {
     public static string Execute(int k, int n, List<int> a, List<int> b)
