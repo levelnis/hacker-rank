@@ -17,7 +17,7 @@ public class MatchingStringsSetup : IChallengeSetup
         System.Console.WriteLine("How many input strings?");
         int stringsCount = Convert.ToInt32(System.Console.ReadLine()!.Trim());
 
-        List<string> strings = new List<string>();
+        List<string> strings = new();
 
         for (int i = 0; i < stringsCount; i++)
         {
@@ -29,7 +29,7 @@ public class MatchingStringsSetup : IChallengeSetup
         System.Console.WriteLine("How many query strings?");
         int queriesCount = Convert.ToInt32(System.Console.ReadLine()!.Trim());
 
-        List<string> queries = new List<string>();
+        List<string> queries = new();
 
         for (int i = 0; i < queriesCount; i++)
         {

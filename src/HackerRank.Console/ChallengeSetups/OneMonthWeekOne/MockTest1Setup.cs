@@ -17,7 +17,7 @@ public class MockTest1Setup : IChallengeSetup
         System.Console.WriteLine("How many numbers?");
         int n = Convert.ToInt32(System.Console.ReadLine()!.Trim());
 
-        List<List<int>> matrix = new List<List<int>>();
+        List<List<int>> matrix = new();
 
         for (int i = 0; i < 2 * n; i++)
         {

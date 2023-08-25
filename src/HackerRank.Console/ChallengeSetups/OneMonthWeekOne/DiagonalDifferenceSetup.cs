@@ -15,7 +15,7 @@ public class DiagonalDifferenceSetup : IChallengeSetup
         System.Console.WriteLine("  ==  Problem: Given a square matrix, calculate the absolute difference between the sums of its diagonals.");
         System.Console.WriteLine("How big is the matrix?");
         int n = Convert.ToInt32(System.Console.ReadLine()!.Trim());
-        List<List<int>> arr = new List<List<int>>();
+        List<List<int>> arr = new();
 
         System.Console.WriteLine($"Enter {n} integers separated by space, {n} times");
         for (int i = 0; i < n; i++)

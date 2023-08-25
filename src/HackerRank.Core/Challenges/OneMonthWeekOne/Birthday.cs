@@ -23,7 +23,7 @@ public static class Birthday
 
         return totals.Count(x => x == d);
 
-        int SumSubArray(List<int> s, int start, int length)
+        static int SumSubArray(List<int> s, int start, int length)
         {
             Console.WriteLine($"Summing array at start {start} of length {length}.");
             var end = length + start;
