@@ -5,34 +5,21 @@ public static class Selector
     public static IChallengeSetup Create(int choice)
     {
         var timer = new ConsoleTimer();
-        switch(choice)
+        return choice switch
         {
-            case 1:
-                return new PlusMinusSetup(timer);
-            case 2:
-                return new MiniMaxiSumSetup(timer);
-            case 3:
-                return new TimeConversionSetup(timer);
-            case 4:
-                return new MatchingStringsSetup(timer);
-            case 5:
-                return new LonelyIntegerSetup(timer);
-            case 6:
-                return new FlippingBitsSetup(timer);
-            case 7:
-                return new DiagonalDifferenceSetup(timer);
-            case 8:
-                return new CountingSortOneSetup(timer);
-            case 9:
-                return new PangramsSetup(timer);
-            case 10:
-                return new TwoArraysSetup(timer);
-            case 11:
-                return new BirthdaySetup(timer);
-            case 12:
-                return new MockTest1Setup(timer);
-            default:
-                throw new InvalidOperationException("Invalid option.");
-        }
+            1 => new PlusMinusSetup(timer),
+            2 => new MiniMaxiSumSetup(timer),
+            3 => new TimeConversionSetup(timer),
+            4 => new MatchingStringsSetup(timer),
+            5 => new LonelyIntegerSetup(timer),
+            6 => new FlippingBitsSetup(timer),
+            7 => new DiagonalDifferenceSetup(timer),
+            8 => new CountingSortOneSetup(timer),
+            9 => new PangramsSetup(timer),
+            10 => new TwoArraysSetup(timer),
+            11 => new BirthdaySetup(timer),
+            12 => new MockTest1Setup(timer),
+            _ => throw new InvalidOperationException("Invalid option."),
+        };
     }
 }
