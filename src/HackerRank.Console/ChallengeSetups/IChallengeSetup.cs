@@ -1,4 +1,4 @@
-namespace HackerRank.Core.Challenges;
+namespace HackerRank.Console.ChallengeSetups;
 
 public interface IChallengeSetup
 {
